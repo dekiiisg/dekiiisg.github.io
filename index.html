@@ -1,15 +1,34 @@
-ir<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Ljubojevic</title>
+  <title>Ljubojevic Desimir</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Persönliche Website von Desimir Ljubojevic">
+  <meta name="description" content="Persönliche Website von Ljubojevic Desimir">
 
   <style>
-    /* ===============================
+    /* =====================================
+       iOS / Mobile Fixes
+       ===================================== */
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus,
+    a:active {
+      outline: none;
+    }
+
+    body {
+      padding-top: env(safe-area-inset-top);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+
+    /* =====================================
        Farbvariablen – Light Mode
-       =============================== */
+       ===================================== */
     :root {
       --bg: #ffffff;
       --text: #1a1a1a;
@@ -19,9 +38,9 @@ ir<!DOCTYPE html>
       --card: #fafafa;
     }
 
-    /* ===============================
+    /* =====================================
        Dark Mode (automatisch)
-       =============================== */
+       ===================================== */
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0f1115;
@@ -33,17 +52,13 @@ ir<!DOCTYPE html>
       }
     }
 
-    /* ===============================
+    /* =====================================
        Base Styles
-       =============================== */
-    * {
-      box-sizing: border-box;
-    }
-
+       ===================================== */
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
@@ -58,9 +73,9 @@ ir<!DOCTYPE html>
       text-decoration: underline;
     }
 
-    /* ===============================
+    /* =====================================
        Layout
-       =============================== */
+       ===================================== */
     .container {
       max-width: 760px;
       margin: 0 auto;
@@ -73,7 +88,7 @@ ir<!DOCTYPE html>
 
     h1 {
       font-size: clamp(2rem, 5vw, 2.6rem);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .subtitle {
@@ -81,11 +96,11 @@ ir<!DOCTYPE html>
       font-size: 1rem;
     }
 
-    /* ===============================
+    /* =====================================
        Navigation
-       =============================== */
+       ===================================== */
     nav {
-      margin-top: 20px;
+      margin-top: 22px;
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
@@ -96,14 +111,14 @@ ir<!DOCTYPE html>
       padding: 6px 0;
     }
 
-    /* ===============================
+    /* =====================================
        Sections
-       =============================== */
+       ===================================== */
     section {
       margin-top: 64px;
       padding: 28px 24px;
       background: var(--card);
-      border-radius: 10px;
+      border-radius: 12px;
       border: 1px solid var(--border);
     }
 
@@ -117,9 +132,9 @@ ir<!DOCTYPE html>
       margin: 14px 0;
     }
 
-    /* ===============================
+    /* =====================================
        Footer
-       =============================== */
+       ===================================== */
     footer {
       margin-top: 80px;
       padding-top: 20px;
@@ -129,9 +144,9 @@ ir<!DOCTYPE html>
       text-align: center;
     }
 
-    /* ===============================
+    /* =====================================
        Mobile Optimierung
-       =============================== */
+       ===================================== */
     @media (max-width: 600px) {
       .container {
         padding: 36px 16px;
@@ -152,7 +167,7 @@ ir<!DOCTYPE html>
   <div class="container">
 
     <header>
-      <h1>Ljubojevic Desimir</h1>
+      <h1>Ljubojevic</h1>
       <div class="subtitle">Persönliche Website</div>
 
       <nav>
@@ -166,7 +181,7 @@ ir<!DOCTYPE html>
     <section id="about">
       <h2>Über mich</h2>
       <p>
-        Mein Name ist Desimir Ljubojevic.  
+        Mein Name ist Desimir Ljubojevic.
         Diese Website dient als persönliche Webpräsenz und zentrale
         Anlaufstelle für Kontaktinformationen.
       </p>
@@ -190,7 +205,8 @@ ir<!DOCTYPE html>
         Schweiz
       </p>
       <p>
-        E-Mail: <a href="mailto:desimir@ljubojevic.ch">desimir@ljubojevic.ch</a>
+        E-Mail:
+        <a href="mailto:desimir@ljubojevic.ch">desimir@ljubojevic.ch</a>
       </p>
       <p class="subtitle">
         Private, nicht-kommerzielle Website
@@ -217,7 +233,7 @@ ir<!DOCTYPE html>
     </section>
 
     <footer>
-      © 2025 vic
+      © 2025 Ljubojevic
     </footer>
 
   </div>
