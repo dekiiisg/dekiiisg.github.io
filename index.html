@@ -1,4 +1,4 @@
-r<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
@@ -7,46 +7,46 @@ r<!DOCTYPE html>
   <meta name="description" content="Persönliche Website von Ljubojevic">
 
   <style>
+    /* ===============================
+       Farbvariablen – Light Mode
+       =============================== */
     :root {
       --bg: #ffffff;
       --text: #1a1a1a;
-      --muted: #666;
+      --muted: #666666;
       --accent: #005fcc;
       --border: #e5e5e5;
+      --card: #fafafa;
+    }
+
+    /* ===============================
+       Dark Mode (automatisch)
+       =============================== */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --text: #e6e6e6;
+        --muted: #a0a0a0;
+        --accent: #4da3ff;
+        --border: #2a2d33;
+        --card: #16181d;
+      }
+    }
+
+    /* ===============================
+       Base Styles
+       =============================== */
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    header {
-      margin-bottom: 60px;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      margin-top: 60px;
-      font-size: 1.6rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 6px;
-    }
-
-    p {
-      margin: 16px 0;
+      line-height: 1.65;
     }
 
     a {
@@ -58,22 +58,92 @@ r<!DOCTYPE html>
       text-decoration: underline;
     }
 
-    .meta {
-      color: var(--muted);
-      font-size: 0.95rem;
+    /* ===============================
+       Layout
+       =============================== */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px;
     }
 
+    header {
+      margin-bottom: 56px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.6rem);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* ===============================
+       Navigation
+       =============================== */
+    nav {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      padding: 6px 0;
+    }
+
+    /* ===============================
+       Sections
+       =============================== */
+    section {
+      margin-top: 64px;
+      padding: 28px 24px;
+      background: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin: 14px 0;
+    }
+
+    /* ===============================
+       Footer
+       =============================== */
     footer {
       margin-top: 80px;
       padding-top: 20px;
       border-top: 1px solid var(--border);
       font-size: 0.9rem;
       color: var(--muted);
+      text-align: center;
     }
 
-    nav a {
-      margin-right: 15px;
-      font-size: 0.95rem;
+    /* ===============================
+       Mobile Optimierung
+       =============================== */
+    @media (max-width: 600px) {
+      .container {
+        padding: 36px 16px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      section {
+        padding: 22px 18px;
+      }
     }
   </style>
 </head>
@@ -83,7 +153,8 @@ r<!DOCTYPE html>
 
     <header>
       <h1>Ljubojevic</h1>
-      <p class="meta">Persönliche Website</p>
+      <div class="subtitle">Persönliche Website</div>
+
       <nav>
         <a href="#about">Über mich</a>
         <a href="#contact">Kontakt</a>
@@ -96,20 +167,19 @@ r<!DOCTYPE html>
       <h2>Über mich</h2>
       <p>
         Mein Name ist Ljubojevic.  
-        Diese Website dient als persönliche Webpräsenz und zentrale Anlaufstelle
-        für Kontaktinformationen.
+        Diese Website dient als persönliche Webpräsenz und zentrale
+        Anlaufstelle für Kontaktinformationen.
       </p>
       <p>
-        Ich interessiere mich für IT, Technologie und moderne, sichere IT-Infrastrukturen.
-        Der Fokus liegt auf pragmatischen, zuverlässigen Lösungen.
+        Mein Interesse liegt im Bereich IT, Technologie und moderner,
+        sicherer IT-Infrastruktur mit Fokus auf pragmatische Lösungen.
       </p>
     </section>
 
     <section id="contact">
       <h2>Kontakt</h2>
       <p>
-        📧 E-Mail:  
-        <a href="mailto:desimir@ljubojevic.ch">desimir@ljubojevic.ch</a>
+        📧 <a href="mailto:ljubo@ljubojevic.ch">ljubo@ljubojevic.ch</a>
       </p>
     </section>
 
@@ -120,10 +190,10 @@ r<!DOCTYPE html>
         Schweiz
       </p>
       <p>
-        E-Mail: <a href="mailto:ljubo@ljubojevic.ch">ljubo@ljubojevic.ch</a>
+        E-Mail: <a href="mailto:desimir@ljubojevic.ch">desimir@ljubojevic.ch</a>
       </p>
-      <p class="meta">
-        Diese Website ist eine private, nicht-kommerzielle Webpräsenz.
+      <p class="subtitle">
+        Private, nicht-kommerzielle Website
       </p>
     </section>
 
@@ -131,16 +201,16 @@ r<!DOCTYPE html>
       <h2>Datenschutz</h2>
       <p>
         Diese Website wird über GitHub Pages betrieben.
-        Beim Aufruf können durch GitHub (GitHub Inc., USA) technisch notwendige
-        Zugriffsdaten (z. B. IP-Adresse, Zeitstempel) verarbeitet werden.
+        Beim Zugriff können technisch notwendige Zugriffsdaten
+        (z. B. IP-Adresse, Zeitstempel) verarbeitet werden.
       </p>
       <p>
         Es werden keine Cookies gesetzt und kein Tracking durchgeführt.
-        Es erfolgt keine Weitergabe der Daten durch den Betreiber dieser Website.
       </p>
       <p>
-        Weitere Informationen zum Datenschutz bei GitHub:
-        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">
+        Weitere Informationen:
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+           target="_blank" rel="noopener">
           GitHub Privacy Statement
         </a>
       </p>
