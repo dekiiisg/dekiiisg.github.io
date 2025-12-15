@@ -3,9 +3,153 @@
 <head>
   <meta charset="utf-8">
   <title>Ljubojevic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Persönliche Website von Ljubojevic">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --accent: #005fcc;
+      --border: #e5e5e5;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    header {
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      font-size: 1.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    p {
+      margin: 16px 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    nav a {
+      margin-right: 15px;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Ljubojevic</h1>
-  <p>Website funktioniert 🎉</p>
+  <div class="container">
+
+    <header>
+      <h1>Ljubojevic</h1>
+      <p class="meta">Persönliche Website</p>
+      <nav>
+        <a href="#about">Über mich</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>Über mich</h2>
+      <p>
+        Mein Name ist Ljubojevic.  
+        Diese Website dient als persönliche Webpräsenz und zentrale Anlaufstelle
+        für Kontaktinformationen.
+      </p>
+      <p>
+        Ich interessiere mich für IT, Technologie und moderne, sichere IT-Infrastrukturen.
+        Der Fokus liegt auf pragmatischen, zuverlässigen Lösungen.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Kontakt</h2>
+      <p>
+        📧 E-Mail:  
+        <a href="mailto:ljubo@ljubojevic.ch">ljubo@ljubojevic.ch</a>
+      </p>
+    </section>
+
+    <section id="impressum">
+      <h2>Impressum</h2>
+      <p>
+        Ljubojevic<br>
+        Schweiz
+      </p>
+      <p>
+        E-Mail: <a href="mailto:ljubo@ljubojevic.ch">ljubo@ljubojevic.ch</a>
+      </p>
+      <p class="meta">
+        Diese Website ist eine private, nicht-kommerzielle Webpräsenz.
+      </p>
+    </section>
+
+    <section id="datenschutz">
+      <h2>Datenschutz</h2>
+      <p>
+        Diese Website wird über GitHub Pages betrieben.
+        Beim Aufruf können durch GitHub (GitHub Inc., USA) technisch notwendige
+        Zugriffsdaten (z. B. IP-Adresse, Zeitstempel) verarbeitet werden.
+      </p>
+      <p>
+        Es werden keine Cookies gesetzt und kein Tracking durchgeführt.
+        Es erfolgt keine Weitergabe der Daten durch den Betreiber dieser Website.
+      </p>
+      <p>
+        Weitere Informationen zum Datenschutz bei GitHub:
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">
+          GitHub Privacy Statement
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      © 2025 Ljubojevic
+    </footer>
+
+  </div>
 </body>
 </html>
